@@ -78,6 +78,21 @@ python app.py run amazon_deals --params electronics 10
   - `category` (optional): Category to filter deals (e.g., 'electronics', 'books')
   - `limit` (optional): Maximum number of deals to fetch (default: 10)
 
+### 3. Thai Fixed Deposits
+- **Name**: `thai_fixed_deposits`
+- **Description**: Scrapes fixed/time-deposit interest rates from major Thai banks (e.g., Bangkok Bank, Kasikornbank, GH Bank) and outputs normalized data for comparison.
+- **Parameters**:
+  - `[banks...]` (optional positional): One or more bank keys to scrape. Defaults to all supported banks.
+    - Supported keys: `bangkok_bank`, `kasikorn`, `gh_bank`
+
+#### Example: Run Thai Fixed Deposits Bot
+
+```bash
+python app.py run thai_fixed_deposits
+# or specific banks
+python app.py run thai_fixed_deposits --params bangkok_bank kasikorn
+```
+
 ## Creating a New Bot
 
 1. Create a new directory in the `bots` folder with your bot's name
