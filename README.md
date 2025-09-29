@@ -93,6 +93,20 @@ python app.py run thai_fixed_deposits
 python app.py run thai_fixed_deposits --params bangkok_bank kasikorn
 ```
 
+### 4. Thai Fixed Deposits Report
+- **Name**: `thai_fd_report`
+- **Description**: Reads the latest JSON from `thai_fixed_deposits` and prints a CLI report of banks and their offers (term, rate, product).
+- **Parameters**:
+  - `file_path` (optional): Path to a specific JSON file; defaults to the latest in `data/thai_fixed_deposits/`.
+
+#### Example: Run Thai Fixed Deposits Report
+
+```bash
+python app.py run thai_fd_report
+# or specify a file
+python app.py run thai_fd_report --params data/thai_fixed_deposits/fd_rates_YYYYMMDD_HHMMSS.json
+```
+
 ## Creating a New Bot
 
 1. Create a new directory in the `bots` folder with your bot's name
