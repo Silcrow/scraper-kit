@@ -1,0 +1,11 @@
+selenium==4.11.2
+beautifulsoup4==4.12.2
+requests==2.31.0
+python-dotenv==1.0.0
+schedule==1.2.0
+Flask==2.3.3
+Flask-SQLAlchemy==3.0.5
+webdriver-manager==4.0.0
+python-telegram-bot==20.4
+pydantic==2.1.1
+fake-useragent==1.4.0
