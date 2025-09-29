@@ -23,7 +23,7 @@ A modular and extensible web scraping and RPA (Robotic Process Automation) stati
 1. Clone the repository:
    ```bash
    git clone <repository-url>
-   cd web-scraping-station
+   cd scraper-kit
    ```
 
 2. Create and activate a virtual environment (recommended):

@@ -7,7 +7,7 @@ This folder contains usage instructions for the scraping/RPA station.
 - `README.md` (you are here): Quick start
 - `bot_template.md`: How to create a new bot
 - `scheduling.md`: How to schedule bots (cron, Python schedule)
- - `site_mapper.md`: How to crawl and map a website (experimental)
+- `site_mapper.md`: How to crawl and map a website (experimental)
 
 ## Quick Start
 
@@ -40,6 +40,18 @@ source venv/bin/activate  # zsh/bash
 # Example: Site Mapper (experimental)
 # Crawl https://example.com to depth 1, restrict to same domain
 ./venv/bin/python app.py run site_mapper --params https://example.com 1 true
+
+# Example: Thai Fixed Deposits — scrape all supported banks
+./venv/bin/python app.py run thai_fixed_deposits
+
+# Example: Thai Fixed Deposits — specific banks only
+./venv/bin/python app.py run thai_fixed_deposits --params bangkok_bank kasikorn
+
+# Example: Thai Fixed Deposits Report — read latest JSON
+./venv/bin/python app.py run thai_fd_report
+
+# Example: Thai Fixed Deposits Report — specify a file
+./venv/bin/python app.py run thai_fd_report --params data/thai_fixed_deposits/fd_rates_YYYYMMDD_HHMMSS.json
 ```
 
 5) Where outputs go
