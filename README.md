@@ -107,6 +107,20 @@ python app.py run thai_fd_report
 python app.py run thai_fd_report --params data/thai_fixed_deposits/fd_rates_YYYYMMDD_HHMMSS.json
 ```
 
+### 5. Site Mapper
+- **Name**: `site_mapper`
+- **Description**: Crawls from a start URL up to a depth, prints a list of discovered URLs grouped by depth, plus a Mermaid diagram of the site graph. Also lists potential unexposed routes from sitemap.xml.
+- **Parameters**:
+  - `start_url` (required): Starting page to crawl
+  - `max_depth` (optional, default `2`): Crawl depth
+  - `same_domain_only` (optional, default `true`): Restrict to the same host
+
+#### Example: Run Site Mapper
+
+```bash
+python app.py run site_mapper --params https://example.com 1 true
+```
+
 ## Creating a New Bot
 
 1. Create a new directory in the `bots` folder with your bot's name

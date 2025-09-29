@@ -7,6 +7,7 @@ This folder contains usage instructions for the scraping/RPA station.
 - `README.md` (you are here): Quick start
 - `bot_template.md`: How to create a new bot
 - `scheduling.md`: How to schedule bots (cron, Python schedule)
+ - `site_mapper.md`: How to crawl and map a website (experimental)
 
 ## Quick Start
 
@@ -35,6 +36,10 @@ source venv/bin/activate  # zsh/bash
 
 # Example: Amazon deals, category "electronics" and limit 10
 ./venv/bin/python app.py run amazon_deals --params electronics 10
+
+# Example: Site Mapper (experimental)
+# Crawl https://example.com to depth 1, restrict to same domain
+./venv/bin/python app.py run site_mapper --params https://example.com 1 true
 ```
 
 5) Where outputs go
@@ -49,3 +54,8 @@ source venv/bin/activate  # zsh/bash
 - If `python app.py list` shows no bots:
   - Ensure the `bots/` directory exists and each bot has an `__init__.py` containing a `Bot` class.
 - If a website blocks scraping, add headers, timeouts, and delays. Respect robots.txt and ToS.
+
+## Notes on Site Mapper (experimental)
+- The `site_mapper` bot prints a list of discovered URLs grouped by depth and a Mermaid diagram showing link relationships.
+- It also attempts to list potential unexposed routes from `sitemap.xml`.
+- Important: Real-world usefulness has NOT been verified on complex or internal sites. Treat results as indicative only. See `docs/site_mapper.md` for details.
